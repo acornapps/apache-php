@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: {{.Appname}}
   labels:
-    app: apache-php
+    app: {{.Appname}}
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: apache-php
+      app: {{.Appname}}
   template:
     metadata:
       labels:
-        app: apache-php
+        app: {{.Appname}}
     spec:
       containers:
-      - name: apache-php
+      - name: {{.Appname}}
         image: {{.Image}}
         ports:
         - containerPort: 80
@@ -31,4 +31,4 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: apache-php
+    app: {{.Appname}}
