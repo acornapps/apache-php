@@ -1,8 +1,4 @@
-appname: apache-php
-namespace: ""
 builds: []
 variables:
 - name: Image
   value: builder-dev.acornsoft.io/apps/apache-php:latest
-- name: Appname
-  value: apache-php
