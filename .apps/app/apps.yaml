@@ -4,7 +4,7 @@ metadata:
   name: {{.AppName}}
   labels:
     app: {{.AppName}}
-    apps: {{.AppName}}  
+    apps: {{.AppName}}
 spec:
   type: NodePort
   ports:
@@ -12,8 +12,8 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: {{.AppName}}
----    
+    apps: {{.AppName}}
+---
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
@@ -25,11 +25,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: {{.AppName}}
+      apps: {{.AppName}}
   template:
     metadata:
       labels:
-        app: {{.AppName}}
+        apps: {{.AppName}}
     spec:
       containers:
       - name: {{.AppName}}
