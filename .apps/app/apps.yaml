@@ -22,7 +22,7 @@ metadata:
     app: {{.AppName}}
     apps: {{.AppName}}
 spec:
-  replicas: 3
+  replicas: {{.Replicas}}
   selector:
     matchLabels:
       apps: {{.AppName}}
