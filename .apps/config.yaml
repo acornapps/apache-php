@@ -2,3 +2,5 @@ builds: []
 variables:
 - name: Image
   value: builder-dev.acornsoft.io/apps/apache-php:latest
+- name: Replicas
+  value: 1  
