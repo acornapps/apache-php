@@ -3,7 +3,7 @@ MAINTAINER Acornsoft
 
 RUN apt-get update \
   && apt-get install -y mysql-client curl \
-  && docker-php-ext-install pdo_mysql \
+  && docker-php-ext-install mysqli \
   && apt-get clean \
   && rm -rf /var/cache/apt/archives
 
