@@ -4,3 +4,11 @@ variables:
   value: builder-dev.acornsoft.io/apps/apache-php:latest
 - name: Replicas
   value: 1  
+- name: RequestCpu
+  value: 0m
+- name: RequestMemory
+  value: 0Mi
+- name: LimitCpu
+  value: 0m
+- name: LimitMemory
+  value: 0Mi
