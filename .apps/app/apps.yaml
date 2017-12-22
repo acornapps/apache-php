@@ -36,3 +36,10 @@ spec:
         image: {{.Image}}
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: {{.LimitCpu}}
+            memory: {{.LimitMemory}}
+          requests:
+            cpu: {{.RequestCpu}}
+            memory: {{.RequestMemory}} 
